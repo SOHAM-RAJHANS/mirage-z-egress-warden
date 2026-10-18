@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+/*
+ * MIRAGE-Z design tokens.
+ *
+ * High-contrast security-operations palette: deep navy surfaces, emerald
+ * (enforcement/allow) primary, cyan (telemetry) secondary, rose/amber status
+ * accents. No purple accents — the console must read as an operations product,
+ * not a template demo.
+ */
+:root {
+  --background: #070b12;
+  --sidebar: #0a101c;
+  --card: #0e1726;
+  --card-elevated: #15233a;
+  --primary: #10b981;
+  --secondary: #06b6d4;
+  --success: #34d399;
+  --danger: #fb7185;
+  --warning: #f59e0b;
+  --foreground: #e8eef8;
+  --muted-foreground: #8fa2bd;
+  --border: #1e2e46;
+  --on-primary: #04120c;
+  --selection: rgba(16, 185, 129, 0.28);
+  --chart-1: #8fa2bd;
+  --chart-2: #06b6d4;
+  --chart-3: #f59e0b;
+  --chart-4: #10b981;
+  --chart-5: #fb7185;
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  --background: #f4f7fb;
+  --sidebar: #ffffff;
+  --card: #ffffff;
+  --card-elevated: #edf3fa;
+  --primary: #047857;
+  --secondary: #0e7490;
+  --success: #047857;
+  --danger: #be123c;
+  --warning: #b45309;
+  --foreground: #0b1727;
+  --muted-foreground: #55657c;
+  --border: #d9e3f0;
+  --on-primary: #ffffff;
+  --selection: rgba(4, 120, 87, 0.18);
+  --chart-1: #55657c;
+  --chart-2: #0e7490;
+  --chart-3: #b45309;
+  --chart-4: #047857;
+  --chart-5: #be123c;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--background);
+  --color-bg-2: var(--sidebar);
+  --color-card: var(--card);
+  --color-elev: var(--card-elevated);
+  --color-accent: var(--primary);
+  --color-info: var(--secondary);
+  --color-mint: var(--success);
+  --color-crit: var(--danger);
+  --color-warn: var(--warning);
+  --color-fg: var(--foreground);
+  --color-muted: var(--muted-foreground);
+  --color-line: var(--border);
+  --color-on: var(--on-primary);
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--selection);
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--border) 80%, var(--muted-foreground));
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Subtle SOC grid with a cyan/emerald aurora in the corners. */
+.grid-bg {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(1200px 500px at 12% -10%, color-mix(in srgb, var(--primary) 7%, transparent), transparent 60%),
+    radial-gradient(900px 420px at 100% 0%, color-mix(in srgb, var(--secondary) 6%, transparent), transparent 55%),
+    linear-gradient(to right, color-mix(in srgb, var(--border) 32%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--border) 32%, transparent) 1px, transparent 1px);
+  background-size:
+    auto,
+    auto,
+    56px 56px,
+    56px 56px;
+}
+
+.lift {
+  box-shadow:
+    0 1px 0 color-mix(in srgb, var(--foreground) 4%, transparent),
+    0 10px 26px color-mix(in srgb, #000 22%, transparent);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+.lift:hover {
+  border-color: color-mix(in srgb, var(--primary) 35%, var(--border));
+}
+html[data-theme="light"] .lift {
+  box-shadow:
+    0 1px 2px rgba(23, 19, 38, 0.05),
+    0 10px 28px rgba(4, 120, 87, 0.07);
+}
+
+.flow-dash {
+  stroke: var(--secondary);
+  stroke-dasharray: 6 8;
+  animation: flow 1.4s linear infinite;
+}
+@keyframes flow {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+.pulse-dot {
+  animation: pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* Tabular numerals for dense telemetry tables. */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}

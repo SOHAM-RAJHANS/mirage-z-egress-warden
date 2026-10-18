@@ -1,0 +1,142 @@
+[
+  {
+    "case_id": "CASE-01",
+    "expected_verdict": "ALLOWED_CLEAN",
+    "payload_sha256": "363d7468773735b6f003dc5cf86c4283447bb65a161100ba5a74d6f0db117071",
+    "previous_hash": "GENESIS",
+    "record_hash": "b16321395b9f297880e596a0ea7d4bdb324a9b6de836ecfc016de417134dfad8"
+  },
+  {
+    "case_id": "CASE-02",
+    "expected_verdict": "ALLOWED_CLEAN",
+    "payload_sha256": "66b33060f49b719cf4ba6ac32ea441e58b0286a4f24c21c222d76ae1ecc134db",
+    "previous_hash": "b16321395b9f297880e596a0ea7d4bdb324a9b6de836ecfc016de417134dfad8",
+    "record_hash": "f40eddc2e7c671bd5ac18178108ad8856410f98042482c53244039fd1ac70419"
+  },
+  {
+    "case_id": "CASE-03",
+    "expected_verdict": "ALLOWED_CLEAN",
+    "payload_sha256": "4961f1812030f9d61da9719d137401c0721293a6fa5df5a83f6a9de26b1fbfa6",
+    "previous_hash": "f40eddc2e7c671bd5ac18178108ad8856410f98042482c53244039fd1ac70419",
+    "record_hash": "c8737917264d90a6ceb01bea6d91407de68b5bf5e82fa8e0dfe20abddc61c95f"
+  },
+  {
+    "case_id": "CASE-04",
+    "expected_verdict": "ALLOWED_CLEAN",
+    "payload_sha256": "1e144a855f5507a1dae9b3281f3c81bfc553f3f447645817ea6e5a961ef84268",
+    "previous_hash": "c8737917264d90a6ceb01bea6d91407de68b5bf5e82fa8e0dfe20abddc61c95f",
+    "record_hash": "675054b34d1c55b971b3ebbc28fa6efb479c7e080eae244c789c25df381ca685"
+  },
+  {
+    "case_id": "CASE-05",
+    "expected_verdict": "ALLOWED_CLEAN",
+    "payload_sha256": "f1ad802d3417b745caa59af1c4d91ace2efe2db5576095494e4729780d0fc0a0",
+    "previous_hash": "675054b34d1c55b971b3ebbc28fa6efb479c7e080eae244c789c25df381ca685",
+    "record_hash": "3365a37f81b9d4e86195b23fb4db6be39bd47831445665955ec902032707afde"
+  },
+  {
+    "case_id": "CASE-06",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "a5e2f20142e0b59bc61a2f67b68dba8662f7dc9cbfd66343c2afc0e889c5d304",
+    "previous_hash": "3365a37f81b9d4e86195b23fb4db6be39bd47831445665955ec902032707afde",
+    "record_hash": "24e2dbd982909f1add49e7b013b0a1023cfbfce970c700922fd3eef1b7b92fb6"
+  },
+  {
+    "case_id": "CASE-07",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "a5e2f20142e0b59bc61a2f67b68dba8662f7dc9cbfd66343c2afc0e889c5d304",
+    "previous_hash": "24e2dbd982909f1add49e7b013b0a1023cfbfce970c700922fd3eef1b7b92fb6",
+    "record_hash": "041f7f1a7db2a986fc8d60bf756474b1e291e9b603758ad43bd4b852f7d09639"
+  },
+  {
+    "case_id": "CASE-08",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "a5e2f20142e0b59bc61a2f67b68dba8662f7dc9cbfd66343c2afc0e889c5d304",
+    "previous_hash": "041f7f1a7db2a986fc8d60bf756474b1e291e9b603758ad43bd4b852f7d09639",
+    "record_hash": "ca4c5a98645b7337afd7afc7cd745547fcb0652d537171314226ca5911dc27c4"
+  },
+  {
+    "case_id": "CASE-09",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "a5e2f20142e0b59bc61a2f67b68dba8662f7dc9cbfd66343c2afc0e889c5d304",
+    "previous_hash": "ca4c5a98645b7337afd7afc7cd745547fcb0652d537171314226ca5911dc27c4",
+    "record_hash": "16a120e264dd4fd5d15802b9e4d68227478500f5ffa2284c7faba32a69ddff48"
+  },
+  {
+    "case_id": "CASE-10",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "dcbc898fe00399a6f5145e465446ec4e0fbe52ee5fd4f287296a53cb2c2cd88d",
+    "previous_hash": "16a120e264dd4fd5d15802b9e4d68227478500f5ffa2284c7faba32a69ddff48",
+    "record_hash": "804b845948588be239510cd524abed33ad5d28b3971504b7027e6bf70fe3dd79"
+  },
+  {
+    "case_id": "CASE-11",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "dcbc898fe00399a6f5145e465446ec4e0fbe52ee5fd4f287296a53cb2c2cd88d",
+    "previous_hash": "804b845948588be239510cd524abed33ad5d28b3971504b7027e6bf70fe3dd79",
+    "record_hash": "83a1602d6586d39b67ffa2a4db2a4025514e3fa22cf17998cf72de1e14e1d6f1"
+  },
+  {
+    "case_id": "CASE-12",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "dcbc898fe00399a6f5145e465446ec4e0fbe52ee5fd4f287296a53cb2c2cd88d",
+    "previous_hash": "83a1602d6586d39b67ffa2a4db2a4025514e3fa22cf17998cf72de1e14e1d6f1",
+    "record_hash": "c3b67e6d64d5ca25bc3009d4381604e515bd94fb8a92d39a472b46682e049c63"
+  },
+  {
+    "case_id": "CASE-13",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "dcbc898fe00399a6f5145e465446ec4e0fbe52ee5fd4f287296a53cb2c2cd88d",
+    "previous_hash": "c3b67e6d64d5ca25bc3009d4381604e515bd94fb8a92d39a472b46682e049c63",
+    "record_hash": "d0911dd4d9255e646c3060d54eabd606b8e53d4b96912d2cc65091974b011fa2"
+  },
+  {
+    "case_id": "CASE-14",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "6bfdf5eb0cdab6825798ac7e75da965829b3c98fb3af29c80e6bb0bfcd5d882f",
+    "previous_hash": "d0911dd4d9255e646c3060d54eabd606b8e53d4b96912d2cc65091974b011fa2",
+    "record_hash": "2bfa222e16397aea423bb17bdd50fcfbd3c5a0cba3f694a8b786f836b2dbd4a5"
+  },
+  {
+    "case_id": "CASE-15",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "6bfdf5eb0cdab6825798ac7e75da965829b3c98fb3af29c80e6bb0bfcd5d882f",
+    "previous_hash": "2bfa222e16397aea423bb17bdd50fcfbd3c5a0cba3f694a8b786f836b2dbd4a5",
+    "record_hash": "e455728176b01ca2636513fda4a57c785e26230ebd594117d7e0c2126ca59568"
+  },
+  {
+    "case_id": "CASE-16",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "6bfdf5eb0cdab6825798ac7e75da965829b3c98fb3af29c80e6bb0bfcd5d882f",
+    "previous_hash": "e455728176b01ca2636513fda4a57c785e26230ebd594117d7e0c2126ca59568",
+    "record_hash": "80c4e363e7d9491a0cce7fa63e6354404ac0535c1ab16680ea023a5f559269a1"
+  },
+  {
+    "case_id": "CASE-17",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "6bfdf5eb0cdab6825798ac7e75da965829b3c98fb3af29c80e6bb0bfcd5d882f",
+    "previous_hash": "80c4e363e7d9491a0cce7fa63e6354404ac0535c1ab16680ea023a5f559269a1",
+    "record_hash": "53e6737740a8dd90b00f58ec9848c36d1be2bf954be921110d2890bf3608e443"
+  },
+  {
+    "case_id": "CASE-18",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "979fd57fea698c8cee87d14e56441fe00f56e7156a3ce9541c1ceb9e8ccc16ce",
+    "previous_hash": "53e6737740a8dd90b00f58ec9848c36d1be2bf954be921110d2890bf3608e443",
+    "record_hash": "fcae50682db1582c92a443f277f7d1c7a605efb3f27d07d0adeef556bf250584"
+  },
+  {
+    "case_id": "CASE-19",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+    "payload_sha256": "62059e181a20679784668949b25fe24967a205f8bf32c6f20f96042e7c1fa786",
+    "previous_hash": "fcae50682db1582c92a443f277f7d1c7a605efb3f27d07d0adeef556bf250584",
+    "record_hash": "a6166fe1aa2fcda791e42a39cc5d54e99524fd551e8231b2a7f3bcd21d9aa493"
+  },
+  {
+    "case_id": "CASE-20",
+    "expected_verdict": "DETECT_TAMPERING",
+    "payload_sha256": "683fad99988dad55ca9b79a4d16b8bf1ee900ece94a1b90d4eafcc59bda96644",
+    "previous_hash": "a6166fe1aa2fcda791e42a39cc5d54e99524fd551e8231b2a7f3bcd21d9aa493",
+    "record_hash": "2f67302c50ba9570d58d6d5a312da66a608b368de496ce60484db6081914857e"
+  }
+]

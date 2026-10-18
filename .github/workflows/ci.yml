@@ -1,0 +1,94 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  backend:
+    name: Backend (python 3.11)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Contract + layer self-tests
+        run: |
+          set -euo pipefail
+          for gate in \
+            backend/schemas.py \
+            backend/layer2_decoys.py \
+            backend/ibm_hybrid_scorer.py \
+            backend/layer1_ingest.py \
+            backend/layer4_warden.py \
+            backend/layer5_ledger.py \
+            backend/main.py; do
+            python -W error "$gate"
+          done
+
+      - name: Pytest regression suite
+        run: python -m pytest -q
+
+      - name: Live gateway verification
+        run: |
+          set -euo pipefail
+          python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --log-level warning &
+          GATEWAY_PID=$!
+          trap 'kill $GATEWAY_PID' EXIT
+          for _ in $(seq 1 60); do
+            if curl -sf http://127.0.0.1:8000/health >/dev/null; then break; fi
+            sleep 0.5
+          done
+          curl -sf http://127.0.0.1:8000/health >/dev/null
+          python benchmarks/chaos_test.py
+          python benchmarks/run_benchmark.py
+
+  frontend:
+    name: Console (node 22)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.28.5
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: frontend/pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Production build
+        run: pnpm build

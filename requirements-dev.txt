@@ -1,0 +1,7 @@
+# Development / verification dependencies (runtime deps live in requirements.txt)
+-r requirements.txt
+
+pytest>=8.0.0
+# Starlette >=1.8 TestClient prefers httpx2; installing it keeps the
+# verification gate warning-free on modern FastAPI/Starlette stacks.
+httpx2>=2.0.0

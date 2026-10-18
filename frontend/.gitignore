@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.tanstack/
+.vercel/
+.output/
+.vite/
+.env
+.env.*
+!.env.example
+.project_id
+.github_repo

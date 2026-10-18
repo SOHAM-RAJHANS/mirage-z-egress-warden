@@ -1,0 +1,39 @@
+# MIRAGE-Z IBM LinuxONE s390x runtime (multi-arch: linux/s390x + linux/amd64).
+FROM python:3.11-slim
+
+LABEL org.opencontainers.image.title="mirage-z-gateway" \
+      org.opencontainers.image.description="MIRAGE-Z autonomous zero-trust egress warden (5-layer in-memory pipeline, IBM LinuxONE s390x)" \
+      org.opencontainers.image.version="1.0.0" \
+      org.opencontainers.image.vendor="MIRAGE-Z Team"
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PYTHONPATH=/app
+
+WORKDIR /app
+
+# Non-root runtime user (least privilege for a security control plane).
+RUN groupadd --system mirage \
+    && useradd --system --gid mirage --create-home --shell /usr/sbin/nologin mirage
+
+COPY requirements.txt ./
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+COPY backend/ ./backend/
+COPY benchmarks/ ./benchmarks/
+COPY demo_traps/ ./demo_traps/
+COPY demo_cockpit.html ./
+COPY mirage_cli.py ./
+COPY contract.json ./
+
+RUN chown -R mirage:mirage /app
+
+USER mirage
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=15s --timeout=3s --start-period=15s --retries=3 \
+    CMD python -c "import sys, urllib.request; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2).status == 200 else 1)"
+
+CMD ["python", "-m", "uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]

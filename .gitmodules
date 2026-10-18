@@ -1,6 +1,0 @@
-[submodule "frontend"]
-	path = frontend
-	url = https://github.com/ishikaaasthana23/river-fjord-able-gold.git
-[submodule "red-team-audit"]
-	path = red-team-audit
-	url = https://github.com/vradhiagar/Mirage-Z-Role5.git

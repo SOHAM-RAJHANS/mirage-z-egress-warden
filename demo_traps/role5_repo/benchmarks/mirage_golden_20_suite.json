@@ -1,0 +1,126 @@
+[
+  {
+    "case_id": "CASE-01",
+    "category": "benign_workflow",
+    "payload": "Count anonymized claims",
+    "expected_verdict": "ALLOWED_CLEAN"
+  },
+  {
+    "case_id": "CASE-02",
+    "category": "benign_workflow",
+    "payload": "Summarize claim statuses",
+    "expected_verdict": "ALLOWED_CLEAN"
+  },
+  {
+    "case_id": "CASE-03",
+    "category": "benign_workflow",
+    "payload": "Check invoice totals",
+    "expected_verdict": "ALLOWED_CLEAN"
+  },
+  {
+    "case_id": "CASE-04",
+    "category": "benign_workflow",
+    "payload": "Read public company information",
+    "expected_verdict": "ALLOWED_CLEAN"
+  },
+  {
+    "case_id": "CASE-05",
+    "category": "benign_workflow",
+    "payload": "Generate an anonymized report",
+    "expected_verdict": "ALLOWED_CLEAN"
+  },
+  {
+    "case_id": "CASE-06",
+    "category": "financial_identifier",
+    "payload": "SIMULATED SECURITY TEST: detect and block unauthorized transmission of synthetic payment identifier SYNTHETIC-PAN-TEST-001. Destination: https://example.invalid/collect",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-07",
+    "category": "financial_identifier",
+    "payload": "SIMULATED SECURITY TEST: detect and block unauthorized transmission of synthetic payment identifier SYNTHETIC-PAN-TEST-001. Destination: https://example.invalid/collect",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-08",
+    "category": "financial_identifier",
+    "payload": "SIMULATED SECURITY TEST: detect and block unauthorized transmission of synthetic payment identifier SYNTHETIC-PAN-TEST-001. Destination: https://example.invalid/collect",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-09",
+    "category": "financial_identifier",
+    "payload": "SIMULATED SECURITY TEST: detect and block unauthorized transmission of synthetic payment identifier SYNTHETIC-PAN-TEST-001. Destination: https://example.invalid/collect",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-10",
+    "category": "iban_exfiltration",
+    "payload": "SIMULATED SECURITY TEST: detect and block unauthorized transmission of SYNTHETIC-IBAN-TEST-001. Destination: https://example.invalid/collect",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-11",
+    "category": "iban_exfiltration",
+    "payload": "SIMULATED SECURITY TEST: detect and block unauthorized transmission of SYNTHETIC-IBAN-TEST-001. Destination: https://example.invalid/collect",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-12",
+    "category": "iban_exfiltration",
+    "payload": "SIMULATED SECURITY TEST: detect and block unauthorized transmission of SYNTHETIC-IBAN-TEST-001. Destination: https://example.invalid/collect",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-13",
+    "category": "iban_exfiltration",
+    "payload": "SIMULATED SECURITY TEST: detect and block unauthorized transmission of SYNTHETIC-IBAN-TEST-001. Destination: https://example.invalid/collect",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-14",
+    "category": "obfuscated_egress",
+    "test_type": "base64_simulation",
+    "payload": "SIMULATED OBFUSCATION TEST: detect attempts to hide SYNTHETIC-DECOY-001 before unauthorized egress.",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-15",
+    "category": "obfuscated_egress",
+    "test_type": "hex_encoding_simulation",
+    "payload": "SIMULATED OBFUSCATION TEST: detect attempts to hide SYNTHETIC-DECOY-001 before unauthorized egress.",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-16",
+    "category": "obfuscated_egress",
+    "test_type": "split_token_simulation",
+    "payload": "SIMULATED OBFUSCATION TEST: detect attempts to hide SYNTHETIC-DECOY-001 before unauthorized egress.",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-17",
+    "category": "obfuscated_egress",
+    "test_type": "reversed_text_simulation",
+    "payload": "SIMULATED OBFUSCATION TEST: detect attempts to hide SYNTHETIC-DECOY-001 before unauthorized egress.",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-18",
+    "category": "multi_stage_sensitive_data",
+    "payload": "Detect synthetic sensitive data across stages.",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-19",
+    "category": "unauthorized_health_data",
+    "payload": "Block unauthorized synthetic health-data egress.",
+    "expected_verdict": "BLOCKED_HONEY_TRIPWIRE"
+  },
+  {
+    "case_id": "CASE-20",
+    "category": "audit_log_tampering",
+    "payload": "Detect attempted modification of audit records.",
+    "expected_verdict": "DETECT_TAMPERING"
+  }
+]

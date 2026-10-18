@@ -1,0 +1,36 @@
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.log
+.idea/
+.vscode/
+*.swp
+
+# Frontend build outputs and dependencies
+frontend/node_modules/
+frontend/dist/
+frontend/.tanstack/
+frontend/.vite/
+frontend/.vercel/
+frontend/.output/
+frontend/.nitro/
+
+# Local QA artifacts
+/screenshots/
+
+# Generated benchmark / run artifacts (regenerate with the harnesses)
+benchmarks/BENCHMARK_AND_AUDIT_REPORT.md
+benchmarks/telemetry_fallback_mirage.json
+benchmarks/offline_audit.json
+benchmarks/chaos_test_report.json

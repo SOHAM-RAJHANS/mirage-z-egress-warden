@@ -1,0 +1,236 @@
+{
+  "mode": "OFFLINE_FALLBACK",
+  "generated_at_utc": "2026-10-17T08:34:29.249489+00:00",
+  "backend_connected": false,
+  "data_is_simulated": true,
+  "notice": "Offline demonstration data only. Not live backend telemetry or a security verdict.",
+  "summary": {
+    "golden_test_records": 20,
+    "offline_audit_records": 20,
+    "offline_audit_chain_valid": true,
+    "offline_audit_status": "VERIFIED",
+    "live_backend_ledger_verified": false
+  },
+  "events": [
+    {
+      "event_id": "OFFLINE-DEMO-001",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "benign_workflow",
+      "expected_verdict": "ALLOWED_CLEAN",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-002",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "benign_workflow",
+      "expected_verdict": "ALLOWED_CLEAN",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-003",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "benign_workflow",
+      "expected_verdict": "ALLOWED_CLEAN",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-004",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "benign_workflow",
+      "expected_verdict": "ALLOWED_CLEAN",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-005",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "benign_workflow",
+      "expected_verdict": "ALLOWED_CLEAN",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-006",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "financial_identifier",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-007",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "financial_identifier",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-008",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "financial_identifier",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-009",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "financial_identifier",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-010",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "iban_exfiltration",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-011",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "iban_exfiltration",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-012",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "iban_exfiltration",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-013",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "iban_exfiltration",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-014",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "obfuscated_egress",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-015",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "obfuscated_egress",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-016",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "obfuscated_egress",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-017",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "obfuscated_egress",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-018",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "multi_stage_sensitive_data",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-019",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "unauthorized_health_data",
+      "expected_verdict": "BLOCKED_HONEY_TRIPWIRE",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    },
+    {
+      "event_id": "OFFLINE-DEMO-020",
+      "timestamp": "--:--:--.---",
+      "source_channel": "SYNTHETIC_TEST",
+      "category": "audit_log_tampering",
+      "expected_verdict": "DETECT_TAMPERING",
+      "actual_verdict": null,
+      "status": "NOT_RUN_AGAINST_BACKEND",
+      "latency_ms": null,
+      "simulated": true
+    }
+  ]
+}

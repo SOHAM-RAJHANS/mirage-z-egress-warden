@@ -1,0 +1,36 @@
+{
+  "mode": "preparation_only",
+  "backend_available": false,
+  "results": [
+    {
+      "test": "Malformed JSON",
+      "status": "NOT_RUN",
+      "reason": "Local backend unavailable"
+    },
+    {
+      "test": "Empty request body",
+      "status": "NOT_RUN",
+      "reason": "Local backend unavailable"
+    },
+    {
+      "test": "Empty JSON string",
+      "status": "NOT_RUN",
+      "reason": "Local backend unavailable"
+    },
+    {
+      "test": "Missing fields",
+      "status": "NOT_RUN",
+      "reason": "Local backend unavailable"
+    },
+    {
+      "test": "Wrong JSON field types",
+      "status": "NOT_RUN",
+      "reason": "Local backend unavailable"
+    },
+    {
+      "test": "Large payload (20,000 characters)",
+      "status": "NOT_RUN",
+      "reason": "Local backend unavailable"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.6.0
+scikit-learn>=1.4.0
+numpy>=1.26.0
+httpx>=0.27.0
+pytest>=8.0.0
+# Optional C-accelerated Aho-Corasick. Layer 1 ships a pure-Python
+# deterministic trie fallback so linux/s390x runs without this wheel.
+# pyahocorasick>=2.1.0
+

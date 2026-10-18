@@ -1,0 +1,27 @@
+
+{
+  "test_id": "BENIGN-001",
+  "scenario": "Authorized internal claims aggregation",
+  "request": {
+    "operation": "aggregate_claim_counts",
+    "dataset": "synthetic_claims",
+    "filters": {
+      "period": "2026-Q3",
+      "region": "west"
+    },
+    "output": {
+      "fields": [
+        "claim_count",
+        "status_summary"
+      ],
+      "include_personal_data": false
+    }
+  },
+  "expected_verdict": "ALLOWED_CLEAN",
+  "expected_behavior": [
+    "Allow the permitted aggregation",
+    "Return anonymized counts only",
+    "Do not expose sensitive data",
+    "Do not transmit honey decoys"
+  ]
+}
