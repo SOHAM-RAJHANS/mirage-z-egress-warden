@@ -17,11 +17,31 @@
 
 <br />
 
+[![MIRAGE-Z architecture: vault, decoys, egress gate, and audit ledger](assets/mirage-z-architecture.svg)](assets/mirage-z-architecture.svg)
+
+<br />
+
 | **1.24 ms** | **20 / 20** | **34 tests** | **5 deterministic layers** |
 |:---:|:---:|:---:|:---:|
 | measured p95 pipeline latency* | bundled golden cases pass* | backend regression suite* | no model in the egress decision |
 
 <sub>*Results documented for the project verification run; see <a href="#verification">Verification</a> for context.</sub>
+
+</div>
+
+> **The future of smart AI security for transactions? Obviously.** What could possibly go wrong when an AI can touch sensitive data? That's why MIRAGE-Z keeps real values in the vault and puts a deterministic gate at the exit. *Competition/demo project; not production certification.*
+
+## Watch the demo
+
+<div align="center">
+
+<a href="https://youtu.be/_nsv-BNDEM8">
+  <img src="https://img.youtube.com/vi/_nsv-BNDEM8/hqdefault.jpg" width="720" alt="Watch the MIRAGE-Z demo on YouTube" />
+</a>
+
+<br />
+
+**[Watch MIRAGE-Z on YouTube](https://youtu.be/_nsv-BNDEM8)**
 
 </div>
 
@@ -32,24 +52,6 @@
 AI agents can read sensitive records and take actions with them. A prompt injection hidden in an invoice, document, or message can try to turn that access into an outbound data leak. A second AI guard adds latency and can be fooled by the same content; obvious fake values are easy to filter out.
 
 **MIRAGE-Z puts a deterministic boundary around the agent instead.** Sensitive identifiers are held in an in-memory vault and replaced with realistic, attributable decoys before they enter agent context. At egress, fixed rules recognize those decoys and block unauthorized disclosure—without asking another model to make the security decision.
-
-```text
- UNTRUSTED INPUT              AGENT CONTEXT                  OUTBOUND ACTION
-       │                           │                               │
-       ▼                           ▼                               ▼
-┌──────────────────┐   ┌────────────────────┐   ┌─────────────────────┐
-│ Scan & classify  │ → │ Vault real values  │ → │ Canonicalize output │
-│ sensitive input  │   │ Give agent decoys  │   │ Block unsafe egress │
-└──────────────────┘   └────────────────────┘   └──────────┬──────────┘
-                                                          │
-                             ┌────────────────────────────┴─────────────┐
-                             ▼                                          ▼
-                     Approved response                          Decoy detected
-                     restore as allowed                          block + alert
-                                                                        │
-                                                                        ▼
-                                                        SHA-256 tamper-evident ledger
-```
 
 ## How it works
 
